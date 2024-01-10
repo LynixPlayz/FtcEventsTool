@@ -7,19 +7,7 @@ $('#event-search-form').on('submit', function () {
         $("#team-number-svg")[0].classList = "w-4 h-4 text-red-500 dark:text-red"
     }
     else{
-        var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function() {
-  if(this.readyState === 4) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("GET", "https://ftc-api.firstinspires.org/v2.0/2023/events?teamNumber=24660");
-xhr.setRequestHeader("Authorization", "Basic YWxleHcxMDg6NDYxN0JCOUMtRDdCOC00OEM4LUE4OEItRDcyQUJGM0QxMzZG");
-
-xhr.send();
+      window.location.href += "?teamnumber=" + teamNumber;
     }
     return false;
 });
