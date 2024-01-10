@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
       maxBodyLength: Infinity,
       url: 'https://ftc-api.firstinspires.org/v2.0/2023/events?teamNumber=' + req.query.teamnumber,
       headers: { 
-        'Authorization': 'Basic ' + process.env.TOKEN
+        'Authorization': 'Basic YWxleHcxMDg6NDYxN0JCOUMtRDdCOC00OEM4LUE4OEItRDcyQUJGM0QxMzZG'
       },
       maxRedirects: 0
     };
@@ -67,7 +67,7 @@ app.get("/scheduleviewer", (req, res) => {
       maxBodyLength: Infinity,
       url: 'https://ftc-api.firstinspires.org/v2.0/2023/schedule/' + req.query.eventId + '/?teamNumber=' + req.query.teamnumber,
       headers: { 
-        'Authorization': 'Basic ' + process.env.TOKEN
+        'Authorization': 'Basic YWxleHcxMDg6NDYxN0JCOUMtRDdCOC00OEM4LUE4OEItRDcyQUJGM0QxMzZG'
       },
       maxRedirects: 0
     };
